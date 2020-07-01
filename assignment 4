@@ -1,0 +1,50 @@
+ [ ]:
+f=open("test.txt","w")
+s=f.write("good morning")
+print(s)
+12
+In [23]:
+def file_read(fname):
+            from itertools import islice
+            with open(fname,"w") as myfile:
+                                             myfile.write("python exercise")
+            txt=open(fname)
+            print(txt.read())
+file_read('test.txt')
+python exercise
+In [21]:
+def file_read(fname):
+                      with open(fname,"r") as myfile:
+                                                      data=myfile.readlines()
+                                                      print(data)
+file_read("test.txt")
+['good morning']
+In [ ]:
+f=open("test.txt","w")
+def file(fname):
+                  import os
+                  statinfo=os.stat(fname)
+                  return statinfo.st_size
+print("file size is",file("test.txt"))
+file size is 12
+In [24]:
+def file_read(fname):
+       with open(fname) as f:
+           content_list=f.readlines()
+           print(content_list)
+file_read('test.txt')
+['python exercise']
+In [26]:
+a_file=open("test.txt")
+number_of_lines=3
+for i in range(number_of_lines):
+             line=a_file.readline()
+             print(line)
+python exercise
+
+
+In [27]:
+with open("test.txt") as f:
+  with open("out.txt","w") as f1:
+    for line in f:
+      f1.write(line)
